@@ -28,8 +28,8 @@ program
     .option('-b, --batch-size <n>', 'The amount of documents to process at once. Defaults to ' + DEFAULT_BATCH_SIZE + '.')
     .option('-o, --skip <n>', 'The number of documents to skip. Defaults to ' + DEFAULT_SKIP + '.')
     .option('-T, --scroll-timeout <s>', 'How long to keep the scroll open. Defaults to ' + DEFAULT_SCROLL_TIMEOUT + '.')
-    .option('-q, --query <s>', 'A custom query. The query must include "fields": ["_source","*"]. Defaults to ' + DEFAULT_QUERY + '.')
-    .option('-S, --sort <s>', 'A custom sort. Defaults to ' + DEFAULT_SORT + '.')
+    .option('-q, --query <s>', 'A custom query. Defaults to ' + JSON.stringify(DEFAULT_QUERY) + '.')
+    .option('-S, --sort <s>', 'A custom sort. Defaults to ' + JSON.stringify(DEFAULT_SORT) + '.')
     .option('-l, --log-level <s>', 'error, warn, info, verbose, debug, silly.')
     .parse(process.argv);
 
